@@ -24,3 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-file-upload';
+
+Cypress.Commands.add('addMultipleItems', productName => {
+  cy.get('.fixed_wrapper .prdocutname').each(($el, index) => {
+    if($el.text() === productName) {
+      cy.get('.productcart').eq(index).click()
+    }
+  })
+})
