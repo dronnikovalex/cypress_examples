@@ -1,22 +1,22 @@
 /// <reference types="cypress" />
+import AutoStoreHomepage from '../../support/PageObjects/automaiton-test-store/StoreHomePage_PO'
+import Haircare from '../../support/PageObjects/automaiton-test-store/StoreHaircare_PO'
 
 describe('Iterating over elements', () => {
+  const homepage = new AutoStoreHomepage()
+  const haircare = new Haircare()
 
   before(function () {
-    cy.fixture('products').then(products => this.products = products)
+    cy.fixture('products').then(products => globalThis.products = products)
   })
 
   beforeEach(() => {
-    cy.visit('https://automationteststore.com/')
-    cy.get('a[href*="product/category"]').contains('Hair Care').click()
+    homepage.visitHomepage()
+    homepage.getHairCareCategory()
   })
 
   it('Add items to basket', function () {
-
-    this.products.productsNames.forEach(item => {
-      cy.addMultipleItems(item)
-    })
-
+    haircare.addHaircareProducts()
   })
 
 
