@@ -13,6 +13,7 @@
     "cypress": "^8.3.1"
   },
   "devDependencies": {
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^1.6.2"
   }
 }
