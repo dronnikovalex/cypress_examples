@@ -6,11 +6,9 @@ describe('Handling fixtures', () => {
   const homepage = new Homepage()
   const contact = new ContactUs()
 
-  before(function() {
+  beforeEach(function() {
     cy.fixture('credentials').then(cred => this.cred = cred)
-  })
 
-  beforeEach(() => {
     homepage.visitHomePage()
     homepage.clickContactUsPage()
   })

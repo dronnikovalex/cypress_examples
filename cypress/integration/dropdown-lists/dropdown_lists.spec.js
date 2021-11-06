@@ -3,7 +3,7 @@
 describe('Handling drodpown lists', () => {
 
   it('Selecting drodown items by using values attr', () => {
-    cy.visit('/')
+    cy.visit(Cypress.env('webdriveruni_homepage'))
     cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click()
     cy.get('#dropdowm-menu-1').select('c#').should('have.value', 'c#')
     cy.get('#dropdowm-menu-2').select('maven').should('have.value', 'maven')
@@ -11,7 +11,7 @@ describe('Handling drodpown lists', () => {
   })
 
   it('Selecting drodown items by using text values', () => {
-    cy.visit('/')
+    cy.visit(Cypress.env('webdriveruni_homepage'))
     cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click()
     cy.get('#dropdowm-menu-1').select('Python').should('have.value', 'python')
     cy.get('#dropdowm-menu-2').select('JUnit').should('have.value', 'junit')
@@ -19,7 +19,7 @@ describe('Handling drodpown lists', () => {
   })
 
   it('Dropdown lists challenge', () => {
-    cy.visit('/')
+    cy.visit(Cypress.env('webdriveruni_homepage'))
     cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click()
     cy.get('#dropdowm-menu-2').select('maven').should('have.value', 'maven')
     cy.get('#dropdowm-menu-2').select('TestNG').contains('TestNG')

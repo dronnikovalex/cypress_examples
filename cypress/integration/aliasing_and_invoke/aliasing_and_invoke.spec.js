@@ -22,7 +22,7 @@ describe('Iterating over elements', () => {
 
   })
 
-  it.only('Calculate total of normal and sale products', () => {
+  it('Calculate total of normal and sale products', () => {
 
     cy.visit('https://automationteststore.com/')
     cy.get('.thumbnail').as('product')
@@ -52,9 +52,8 @@ describe('Iterating over elements', () => {
     })
 
       .then(() => {
-        expect(total).to.eql(616.7)
+        expect(total).to.eql(Cypress.env('expectedPrice'))
       })
-
 
   })
 

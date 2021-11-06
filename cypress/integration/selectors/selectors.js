@@ -10,7 +10,6 @@ describe('Test Contact Us form via automation test store', () => {
 
     cy.get('.info_links_footer').find('li').contains('Contact Us').click()
     //different approach
-    cy.get()
     cy.title().should('contain', 'Contact Us')
 
     cy.get('#ContactUsFrm_first_name').type('Alex')
@@ -20,7 +19,7 @@ describe('Test Contact Us form via automation test store', () => {
 
   })
 
-  it.only('Should successfull from submission via contact us form by using xPath', function () {
+  it('Should successfull from submission via contact us form by using xPath', function () {
     
     cy.xpath("//a[contains(@href, 'contact')]").click()
     cy.title().should('contain', 'Contact Us')
