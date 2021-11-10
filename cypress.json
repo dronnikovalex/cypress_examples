@@ -1,0 +1,17 @@
+{
+  "env": {
+    "webdriveruni_homepage": "http://www.webdriveruniversity.com/",
+    "automationstore_homepage": "https://automationteststore.com/",
+    "expectedPrice": 654.1
+  },
+  "projectId": "3xpjmo",
+  "chromeWebSecurity": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "video": false
+}
