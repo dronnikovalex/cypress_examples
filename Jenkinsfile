@@ -13,7 +13,6 @@ pipeline {
           steps {
             git url: 'https://github.com/dronnikovalex/cypress_examples.git'
             bat 'npm install'
-            bat 'npm update'
             bat 'npm run run-spec-dashboard'
           }
         }
@@ -24,7 +23,6 @@ pipeline {
           steps {
             git url: 'https://github.com/dronnikovalex/cypress_examples.git'
             bat 'npm install'
-            bat 'npm update'
             bat 'npm run run-spec-dashboard'
           }
         }

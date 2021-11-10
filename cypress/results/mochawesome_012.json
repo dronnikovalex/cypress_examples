@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-10T18:17:46.681Z",
+    "end": "2021-11-10T18:17:51.420Z",
+    "duration": 4739,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad567c82-fff4-4100-b360-36d5ee6f5969",
+      "title": "",
+      "fullFile": "cypress/integration/multiple_items_to_basket/radio_buttons.spec.js",
+      "file": "cypress/integration/multiple_items_to_basket/radio_buttons.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35252b96-b031-4690-956d-a9d9a77237fc",
+          "title": "Verify radio buttons",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check radio buttons",
+              "fullTitle": "Verify radio buttons Check radio buttons",
+              "timedOut": null,
+              "duration": 2289,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#radio-buttons').find('input[type=radio]').as('radioButtons');\ncy.get('@radioButtons').each($radio => {\n  cy.wrap($radio).check().should('be.checked');\n});",
+              "err": {},
+              "uuid": "b7960c29-6199-42cb-a913-165a6ef82f8e",
+              "parentUUID": "35252b96-b031-4690-956d-a9d9a77237fc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check states of radiobuttons",
+              "fullTitle": "Verify radio buttons Check states of radiobuttons",
+              "timedOut": null,
+              "duration": 582,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#radio-buttons-selected-disabled').within(() => {\n  cy.get('[value=\"lettuce\"]').should('not.be.checked');\n  cy.get('[value=\"cabbage\"]').should('be.disabled');\n  cy.get('[value=\"pumpkin\"]').should('be.checked');\n});",
+              "err": {},
+              "uuid": "e06371c4-658a-4d40-a9ea-40003e2f3ced",
+              "parentUUID": "35252b96-b031-4690-956d-a9d9a77237fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b7960c29-6199-42cb-a913-165a6ef82f8e",
+            "e06371c4-658a-4d40-a9ea-40003e2f3ced"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2871,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
