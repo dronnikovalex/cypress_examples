@@ -12,7 +12,7 @@
     "mocha-merge": "npx mochawesome-merge cypress/results/*.json > mocha.json && npx marge mocha.json",
     "mocha-delete-html": "rm -rf mochawesome-report/* || true",
     "delete-results": "rm -rf cypress/results/* || true",
-    "run-spec-dashboard": "npx cypress run --spec cypress/integration/multiple_items_to_basket/* --record --key eda8799d-5688-4622-9eb4-c85239adc23a",
+    "run-spec-dashboard": "npx cypress run --spec cypress/integration/multiple_items_to_basket/* --record --key eda8799d-5688-4622-9eb4-c85239adc23a --parallel",
     "cypress-regression-pack": "npm run delete-results && npm run mocha-delete-html && npm run trigger-all-tests && npm run mocha-merge",
     "auto-store-test-run": "npx cypress run --spec cypress/integration/multiple_items_to_basket/multiple_items_to_basket.spec.js",
     "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed"
