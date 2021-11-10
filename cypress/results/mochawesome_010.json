@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-10T17:35:54.573Z",
+    "end": "2021-11-10T17:35:59.180Z",
+    "duration": 4607,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "03218a6d-d9d1-408a-90ce-bf89852de985",
+      "title": "",
+      "fullFile": "cypress/integration/multiple_items_to_basket/multiple_items_to_basket.spec.js",
+      "file": "cypress/integration/multiple_items_to_basket/multiple_items_to_basket.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "11966866-164e-4450-a8fc-91e82b70453c",
+          "title": "Iterating over elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add items to basket",
+              "fullTitle": "Iterating over elements Add items to basket",
+              "timedOut": null,
+              "duration": 2548,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// If condition checks witch browser was started\nif (Cypress.isBrowser('firefox') || Cypress.isBrowser('chrome')) {\n  haircare.addHaircareProducts();\n} else {\n  cy.log('Not supproted browser, no logic here');\n}",
+              "err": {},
+              "uuid": "ddc9f839-c9c6-4fff-be0c-a14fd6dfede8",
+              "parentUUID": "11966866-164e-4450-a8fc-91e82b70453c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ddc9f839-c9c6-4fff-be0c-a14fd6dfede8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2548,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
