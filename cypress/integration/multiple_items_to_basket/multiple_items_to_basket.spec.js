@@ -16,7 +16,12 @@ describe('Iterating over elements', () => {
   })
 
   it('Add items to basket', function () {
-    haircare.addHaircareProducts()
+    // If condition checks witch browser was started
+    if (Cypress.isBrowser('firefox') || Cypress.isBrowser('chrome') ) {
+      haircare.addHaircareProducts()
+    } else {
+      cy.log('Not supproted browser, no logic here')      
+    }
   })
 
 

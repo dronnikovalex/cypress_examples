@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-06T16:03:37.247Z",
+    "end": "2021-11-06T16:07:14.184Z",
+    "duration": 9036,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f358a179-46c7-4522-a539-5eca23cb0fe8",
+      "title": "",
+      "fullFile": "cypress/integration/contact-us_POM/contact_us.spec.js",
+      "file": "cypress/integration/contact-us_POM/contact_us.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec83e54c-632d-431b-ad76-d1324aaa7f6c",
+          "title": "Handling fixtures",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Using fixture to fill inputs",
+              "fullTitle": "Handling fixtures Using fixture to fill inputs",
+              "timedOut": null,
+              "duration": 3748,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.document().should('have.property', 'charset').and('eq', 'UTF-8');\ncy.title().should('include', 'WebDriver | Contact Us');\ncontact.formSubmission(this.cred.firstName, this.cred.lastName, this.cred.email, \"Sample text\", \"h1\", \"Thank You for your Message!\");",
+              "err": {},
+              "uuid": "9a5e68c9-3857-4cda-ae45-ae07339ae4cf",
+              "parentUUID": "ec83e54c-632d-431b-ad76-d1324aaa7f6c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Getting error page if email is empty",
+              "fullTitle": "Handling fixtures Getting error page if email is empty",
+              "timedOut": null,
+              "duration": 1818,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.document().should('have.property', 'charset').and('eq', 'UTF-8');\ncy.title().should('include', 'WebDriver | Contact Us');\ncontact.formSubmission(this.cred.firstName, this.cred.lastName, \" \", \"Sample text\", \"body\", \"Error: Invalid email address\");",
+              "err": {},
+              "uuid": "909085ad-3130-4c65-895b-a0470f3e94ae",
+              "parentUUID": "ec83e54c-632d-431b-ad76-d1324aaa7f6c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a5e68c9-3857-4cda-ae45-ae07339ae4cf",
+            "909085ad-3130-4c65-895b-a0470f3e94ae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "48030a8f-3bfd-4c4e-964d-28c352b2af1c",
+      "title": "",
+      "fullFile": "cypress/integration/alerts/alerts.spec.js",
+      "file": "cypress/integration/alerts/alerts.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35e0983a-bbd6-48da-9058-aec33fefb84e",
+          "title": "Handling alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling alerts",
+              "fullTitle": "Handling alerts Handling alerts",
+              "timedOut": null,
+              "duration": 1878,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://www.webdriveruniversity.com/');\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click();\ncy.get('#button1').click();\ncy.on('window:alert', $text => {\n  expect($text).to.eql('I am an alert box!');\n});",
+              "err": {},
+              "uuid": "5a15107a-e88b-40be-9400-53efa70dee9e",
+              "parentUUID": "35e0983a-bbd6-48da-9058-aec33fefb84e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handling confirm window pressed value OK",
+              "fullTitle": "Handling alerts Handling confirm window pressed value OK",
+              "timedOut": null,
+              "duration": 954,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://www.webdriveruniversity.com/');\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click();\ncy.get('#button4').click();\ncy.on('window:confirm', str => {});\ncy.get('#confirm-alert-text').contains('You pressed OK!');",
+              "err": {},
+              "uuid": "00690c87-ab8c-467b-ae67-959830e1a80a",
+              "parentUUID": "35e0983a-bbd6-48da-9058-aec33fefb84e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handling confirm window pressed value CANCEL",
+              "fullTitle": "Handling alerts Handling confirm window pressed value CANCEL",
+              "timedOut": null,
+              "duration": 638,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://www.webdriveruniversity.com/');\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click();\ncy.get('#button4').click();\ncy.on('window:confirm', str => false);\ncy.get('#confirm-alert-text').contains('You pressed Cancel!');",
+              "err": {},
+              "uuid": "9e94d1c6-2035-4e18-a512-2d8305e5872a",
+              "parentUUID": "35e0983a-bbd6-48da-9058-aec33fefb84e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5a15107a-e88b-40be-9400-53efa70dee9e",
+            "00690c87-ab8c-467b-ae67-959830e1a80a",
+            "9e94d1c6-2035-4e18-a512-2d8305e5872a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3470,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

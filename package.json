@@ -4,7 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "open": "npx cypress open",
+    "trigger-all-tests": "npx cypress run",
+    "trigger-all-tests-headed": "npx cypress run --headed",
+    "trigger-all-tests-chrome": "npx cypress run --browser chrome",
+    "trigger-all-tests-firefox": "npx cypress run --browser firefox",
+    "mocha-merge": "npx mochawesome-merge cypress/results/*.json > mocha.json && npx marge mocha.json",
+    "mocha-delete-html": "rm -rf mochawesome-report/* || true",
+    "delete-results": "rm -rf cypress/results/* || true",
+    "cypress-regression-pack": "npm run delete-results && npm run mocha-delete-html && npm run trigger-all-tests && npm run mocha-merge",
+    "auto-store-test-run": "npx cypress run --spec cypress/integration/multiple_items_to_basket/multiple_items_to_basket.spec.js",
+    "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed"
+
   },
   "keywords": [],
   "author": "",
@@ -14,6 +25,9 @@
   },
   "devDependencies": {
     "cypress-file-upload": "^5.0.8",
-    "cypress-xpath": "^1.6.2"
+    "cypress-xpath": "^1.6.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1"
   }
 }
