@@ -1,0 +1,4 @@
+{
+  "pluginsFile": "cypress/plugins/sitemap.js",
+  "baseUrl": "https://www.webdriveruniversity.com/"
+}

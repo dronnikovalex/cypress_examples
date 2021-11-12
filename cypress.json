@@ -13,5 +13,6 @@
     "html": false,
     "json": true
   },
-  "video": false
+  "video": false,
+  "baseUrl": "https://www.webdriveruniversity.com/"
 }

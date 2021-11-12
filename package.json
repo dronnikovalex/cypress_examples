@@ -16,15 +16,17 @@
     "cypress-regression-pack": "npm run delete-results && npm run mocha-delete-html && npm run trigger-all-tests && npm run mocha-merge",
     "auto-store-test-run": "npx cypress run --spec cypress/integration/multiple_items_to_basket/multiple_items_to_basket_tests.spec.js",
     "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.3.1"
+    "cypress": "^8.3.1",
+    "got": "^11.8.2",
+    "x2js": "^3.4.2"
   },
   "devDependencies": {
+    "cypress-each": "^1.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^1.6.2",
     "mochawesome": "^7.0.1",
