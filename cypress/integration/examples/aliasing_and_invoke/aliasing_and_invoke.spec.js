@@ -51,9 +51,9 @@ describe('Iterating over elements', () => {
 
     })
 
-      .then(() => {
-        expect(total).to.eql(Cypress.env('expectedPrice'))
-      })
+    .then(() => {
+      expect(total).to.eql(Cypress.env('expectedPrice'))
+    })
 
   })
 

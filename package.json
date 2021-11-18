@@ -15,7 +15,8 @@
     "run-spec-dashboard": "npx cypress run --spec cypress/integration/multiple_items_to_basket/* --record --key eda8799d-5688-4622-9eb4-c85239adc23a --parallel",
     "cypress-regression-pack": "npm run delete-results && npm run mocha-delete-html && npm run trigger-all-tests && npm run mocha-merge",
     "auto-store-test-run": "npx cypress run --spec cypress/integration/multiple_items_to_basket/multiple_items_to_basket_tests.spec.js",
-    "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed"
+    "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed",
+    "bdd": "npm run open -- --config-file bddConfig.json"
   },
   "keywords": [],
   "author": "",
@@ -26,11 +27,22 @@
     "x2js": "^3.4.2"
   },
   "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.0",
     "cypress-each": "^1.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^1.6.2",
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^6.0.1"
+    "mochawesome-report-generator": "^6.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

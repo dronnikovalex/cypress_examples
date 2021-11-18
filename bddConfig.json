@@ -1,0 +1,12 @@
+{
+  "env": {
+    "webdriveruni_homepage": "http://www.webdriveruniversity.com/",
+    "automationstore_homepage": "https://automationteststore.com/",
+    "expectedPrice": 654.1
+  },
+  "baseUrl": "https://www.webdriveruniversity.com/",
+  "testFiles": "**/*.{feature,features}",
+  "watchForFileChanges": false,
+  "viewportHeight": 720,
+  "viewportWidth": 1280
+}

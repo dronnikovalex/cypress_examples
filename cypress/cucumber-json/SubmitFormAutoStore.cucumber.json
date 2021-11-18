@@ -1,0 +1,92 @@
+[
+  {
+    "description": "  I want to submit form via contacts us page",
+    "keyword": "Feature",
+    "name": "Test form submission on automation test store",
+    "line": 1,
+    "id": "test-form-submission-on-automation-test-store",
+    "tags": [],
+    "uri": "SubmitFormAutoStore.feature",
+    "elements": [
+      {
+        "id": "test-form-submission-on-automation-test-store;form-submission",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Form submission",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 10614000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click on ContactUs button",
+            "result": {
+              "status": "passed",
+              "duration": 7180000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstname",
+                      "email",
+                      "enquiry"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "test",
+                      "test@test.ru",
+                      "Sample text"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I fill inputs with correct data",
+            "result": {
+              "status": "passed",
+              "duration": 876000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I submit the form",
+            "result": {
+              "status": "passed",
+              "duration": 821000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I see success message \"Your enquiry has been successfully sent to the store owner!\"",
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -18,10 +18,21 @@ import './commands'
 import 'cypress-file-upload';
 require('cypress-xpath')
 
+
 module.exports = (on, config) => {
+
   config.ignoreTestFiles = "**/2-advanced-examples/*.spec.js";
   return config;
 };
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+//hide XHR
+const app = window.top;
+
+if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+  const style = app.document.createElement('style');
+  style.innerHTML =
+    '.command-name-request, .command-name-xhr { display: none }';
+  style.setAttribute('data-hide-command-log-request', '');
+
+  app.document.head.appendChild(style);
+}

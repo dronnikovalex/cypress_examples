@@ -63,7 +63,7 @@ describe('Verify radio buttons', () => {
     cy.get('#veggie').prevUntil('#fruits').should('have.length', 5)
   })
 
-  it.only('sibling() command gets all sibling items', () => {
+  it('sibling() command gets all sibling items', () => {
     cy.get('.btn-primary.active').siblings().should('have.length', 3)
   })
 })
