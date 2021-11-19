@@ -1,0 +1,53 @@
+[
+  {
+    "description": "  I want to add all products from homepage to cart",
+    "keyword": "Feature",
+    "name": "e2e add all products in cart",
+    "line": 1,
+    "id": "e2e-add-all-products-in-cart",
+    "tags": [],
+    "uri": "AddAllItemsInCart.feature",
+    "elements": [
+      {
+        "id": "e2e-add-all-products-in-cart;add-all-product-to-cart-and-validate-total-count-in-cart",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Add all product to cart and validate total count in cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 5645000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on prefered brand",
+            "result": {
+              "status": "passed",
+              "duration": 724000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I see page filtered by prefered brand",
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

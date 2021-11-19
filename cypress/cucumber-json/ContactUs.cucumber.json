@@ -1,0 +1,94 @@
+[
+  {
+    "description": "  I want to fill and submit contanct us form",
+    "keyword": "Feature",
+    "name": "e2e fill contanct us fomr",
+    "line": 1,
+    "id": "e2e-fill-contanct-us-fomr",
+    "tags": [],
+    "uri": "ContactUs.feature",
+    "elements": [
+      {
+        "id": "e2e-fill-contanct-us-fomr;successfull-subbmission-contact-us-form",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Successfull subbmission contact us form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 1094000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click ContanctUs button",
+            "result": {
+              "status": "passed",
+              "duration": 415000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstname",
+                      "lastname",
+                      "email",
+                      "comment"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Alex",
+                      "Dronnikov",
+                      "test@test.ru",
+                      "Sample text"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I fill inputs",
+            "result": {
+              "status": "passed",
+              "duration": 1262000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click submit button",
+            "result": {
+              "status": "passed",
+              "duration": 1121000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I see successfully form submission message",
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -16,7 +16,9 @@
     "cypress-regression-pack": "npm run delete-results && npm run mocha-delete-html && npm run trigger-all-tests && npm run mocha-merge",
     "auto-store-test-run": "npx cypress run --spec cypress/integration/multiple_items_to_basket/multiple_items_to_basket_tests.spec.js",
     "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed",
-    "bdd": "npm run open -- --config-file bddConfig.json"
+    "bdd": "npm run open -- --config-file bddConfig.json",
+    "bdd-headless": "npx cypress run --config-file bddConfig.json --spec cypress/integration/BDD/*.feature --headed --browser chrome",
+    "gen-cucumber-report": "node cucumber-html-reports.js"
   },
   "keywords": [],
   "author": "",

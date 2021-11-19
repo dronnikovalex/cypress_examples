@@ -1,0 +1,153 @@
+[
+  {
+    "description": "  I want to add product to cart and validate total cost",
+    "keyword": "Feature",
+    "name": "e2e add product to cart",
+    "line": 1,
+    "id": "e2e-add-product-to-cart",
+    "tags": [],
+    "uri": "AddItemToCart.feature",
+    "elements": [
+      {
+        "id": "e2e-add-product-to-cart;add-product-to-cart-and-validate-total-cost",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Add product to cart and validate total cost",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Log counter",
+            "result": {
+              "status": "passed",
+              "duration": 87000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 2004000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I choose \"Apparel & accessories\" category",
+            "result": {
+              "status": "passed",
+              "duration": 820000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I choose product \"Fiorella Purple Peep Toes\"",
+            "result": {
+              "status": "passed",
+              "duration": 999000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I add product to cart",
+            "result": {
+              "status": "passed",
+              "duration": 3065000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I see product in a cart with valid total coast",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "e2e-add-product-to-cart;second-scenario",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Second scenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Log counter",
+            "result": {
+              "status": "passed",
+              "duration": 190000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 666000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I choose \"Apparel & accessories\" category",
+            "result": {
+              "status": "passed",
+              "duration": 688000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I choose product \"Fiorella Purple Peep Toes\"",
+            "result": {
+              "status": "passed",
+              "duration": 835000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I add product to cart",
+            "result": {
+              "status": "passed",
+              "duration": 3119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I see product in a cart with valid total coast",
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
