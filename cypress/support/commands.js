@@ -39,3 +39,16 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   }
 
 })
+
+Cypress.Commands.add('loginAdminHomePage', (login, password) => {
+  cy.visit('/')
+  
+  cy.get('#login').type(login)
+  cy.get('#password').type(password)
+  cy.get('.btn-login').click()
+  .then(() => {
+    cy.get('.inputs-wrap input').each($input => {
+      cy.wrap($input).type(9)
+    })
+  })
+})

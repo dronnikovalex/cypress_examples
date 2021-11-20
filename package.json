@@ -18,20 +18,23 @@
     "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed",
     "bdd": "npm run open -- --config-file bddConfig.json",
     "bdd-headless": "npx cypress run --config-file bddConfig.json --spec cypress/integration/BDD/*.feature --headed --browser chrome",
-    "gen-cucumber-report": "node cucumber-html-reports.js"
+    "gen-cucumber-report": "node cucumber-html-reports.js",
+    "run-staging-cfg": "npx cypress open --config-file AdminStaging.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.3.1",
+    "chai-sorted": "^0.2.0",
+    "cypress": "^9.0.0",
     "got": "^11.8.2",
     "x2js": "^3.4.2"
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.3.0",
-    "cypress-each": "^1.7.0",
+    "cypress-each": "^1.9.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-recurse": "^1.11.0",
     "cypress-xpath": "^1.6.2",
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.0",
