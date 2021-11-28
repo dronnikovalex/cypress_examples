@@ -3,7 +3,7 @@
 describe('It tests finding particular item in the list', () => {
 
   it('should find item', () => {
-    cy.visit('localhost:3001') //start localserver with list.html before
+    cy.visit('html-templates/static-list-of-items/list.html')
     cy.get('#list li')
       .then($list => {
         const index = Cypress._.findIndex($list, $item => $item.textContent === 'test')
