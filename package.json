@@ -19,7 +19,8 @@
     "bdd": "npm run open -- --config-file bddConfig.json",
     "bdd-headless": "npx cypress run --config-file bddConfig.json --spec cypress/integration/BDD/*.feature --headed --browser chrome",
     "gen-cucumber-report": "node cucumber-html-reports.js",
-    "run-staging-cfg": "npx cypress open --config-file AdminStaging.json"
+    "run-staging-cfg": "npx cypress open --config-file AdminStaging.json",
+    "run-server": "node server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "cypress": "^9.0.0",
     "faker": "^5.5.3",
     "got": "^11.8.2",
+    "http-server": "^14.0.0",
     "x2js": "^3.4.2"
   },
   "devDependencies": {
