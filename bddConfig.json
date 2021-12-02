@@ -7,6 +7,5 @@
   "baseUrl": "https://www.webdriveruniversity.com/",
   "testFiles": "**/*.{feature,features}",
   "watchForFileChanges": false,
-  "viewportHeight": 720,
-  "viewportWidth": 1280
+  "experimentalSessionSupport": true
 }
