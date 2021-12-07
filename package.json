@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-data-session": "^1.13.3",
     "cypress-each": "^1.9.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-highlight": "^1.2.0",

@@ -24,13 +24,6 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-
-  if (err.message.includes('Unexpected token \'<\'') || err.message.includes('$ is not defined') ) {
-    return false
-  }
-
-})
 
 Cypress.Commands.add('addMultipleItems', productName => {
   cy.get('.fixed_wrapper .prdocutname').each(($el, index) => {
