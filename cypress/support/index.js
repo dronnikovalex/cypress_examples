@@ -18,7 +18,7 @@
 import './commands'
 import 'cypress-file-upload';
 require('cypress-xpath')
-
+import 'cypress-data-session'
 
 module.exports = (on, config) => {
 
@@ -27,16 +27,16 @@ module.exports = (on, config) => {
 };
 
 //hide XHR
-const app = window.top;
+// const app = window.top;
 
-if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
-  const style = app.document.createElement('style');
-  style.innerHTML =
-    '.command-name-request, .command-name-xhr { display: none }';
-  style.setAttribute('data-hide-command-log-request', '');
+// if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+//   const style = app.document.createElement('style');
+//   style.innerHTML =
+//     '.command-name-request, .command-name-xhr { display: none }';
+//   style.setAttribute('data-hide-command-log-request', '');
 
-  app.document.head.appendChild(style);
-}
+//   app.document.head.appendChild(style);
+// }
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from

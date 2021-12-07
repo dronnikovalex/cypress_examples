@@ -1,0 +1,20 @@
+{
+  "contacts": [
+    {
+      "name": "Fixture1",
+      "value": "Alex value"
+    },
+    {
+      "name": "Fixture2ss",
+      "value": "Ivan value"
+    },
+    {
+      "name": "Fixture3",
+      "value": "Miwa value"
+    },
+    {
+      "name": "Fixture4s",
+      "value": "Anna value"
+    }
+  ]
+}
