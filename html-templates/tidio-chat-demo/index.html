@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <style>
+    .container {
+      margin:  auto;
+      background-color: #eee;
+      margin-top: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+      border-radius: 10px;
+      flex-wrap: wrap;
+      font-size: 25px;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span style="padding-bottom: 10px;">Some text</span>
+    <button id="open-chat">Open chat</button>
+  </div>
+  <script>
+    //add tidio script to head
+    window.addEventListener('load', function() {
+      const head = document.getElementsByTagName('head')[0]
+      const script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.src = 'https://code.tidio.co/samplepath.js'
+      head.appendChild(script)
+    })
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
