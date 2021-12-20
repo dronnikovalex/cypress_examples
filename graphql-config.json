@@ -1,0 +1,9 @@
+{
+  "env": {
+    "gqlHost": "http://localhost:3000/"
+  },
+  "baseUrl": "http://localhost:1234/",
+  "testFiles": "**/graphql/*",
+  "watchForFileChanges": false,
+  "experimentalSessionSupport": true
+}

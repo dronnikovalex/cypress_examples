@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "open": "npx cypress open",
+    "cy:open": "cypress open",
+    "cy:open-graphql": "cypress open --config-file graphql-config.json",
     "trigger-all-tests": "npx cypress run",
     "trigger-all-tests-headed": "npx cypress run --headed",
     "trigger-all-tests-chrome": "npx cypress run --browser chrome",
@@ -16,11 +17,17 @@
     "cypress-regression-pack": "npm run delete-results && npm run mocha-delete-html && npm run trigger-all-tests && npm run mocha-merge",
     "auto-store-test-run": "npx cypress run --spec cypress/integration/multiple_items_to_basket/multiple_items_to_basket_tests.spec.js",
     "multi-browser-run": "npm run auto-store-test-run -- --browser electron --headed && npm run auto-store-test-run -- --browser firefox --headed",
-    "bdd": "npm run open -- --config-file bddConfig.json",
+    "bdd": "npm run cy:open -- --config-file bddConfig.json",
     "bdd-headless": "npx cypress run --config-file bddConfig.json --spec cypress/integration/BDD/*.feature --headed --browser chrome",
     "gen-cucumber-report": "node cucumber-html-reports.js",
-    "run-staging-cfg": "npx cypress open --config-file AdminStaging.json",
-    "run-server": "node server/index.js"
+    "run-staging-cfg": "npx cypress cy:open --config-file AdminStaging.json",
+    "run-server": "node server/index.js",
+    "server": "npm run app && npm run start",
+    "start": "json-graphql-server todo-graphql/db.js",
+    "app": "parcel serve todo-graphql/src/index.html -d todo-graphql/dist",
+    "dev": "start-test server 1234 cy:open-graphql",
+    "build": "parcel build --no-source-maps"
+
   },
   "keywords": [],
   "author": "",
@@ -34,7 +41,15 @@
     "i": "^0.3.7",
     "npm": "^8.1.4",
     "socket.io-client": "^4.4.0",
-    "x2js": "^3.4.2"
+    "x2js": "^3.4.2",
+    "@apollo/client": "3.5.2",
+    "classnames": "2.3.1",
+    "graphql": "16.0.1",
+    "json-graphql-server": "2.2.3",
+    "react": "17.0.2",
+    "react-apollo": "3.1.5",
+    "react-dom": "17.0.2",
+    "todomvc-app-css": "2.4.1"
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.3.0",
@@ -48,7 +63,10 @@
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^6.0.1",
-    "multiple-cucumber-html-reporter": "^1.18.0"
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "parcel-bundler": "1.12.5",
+    "serve": "13.0.2",
+    "start-server-and-test": "1.14.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
