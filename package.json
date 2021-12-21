@@ -27,7 +27,6 @@
     "app": "parcel serve todo-graphql/src/index.html -d todo-graphql/dist",
     "dev": "start-test server 1234 cy:open-graphql",
     "build": "parcel build --no-source-maps"
-
   },
   "keywords": [],
   "author": "",

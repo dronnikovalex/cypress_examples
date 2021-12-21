@@ -10,7 +10,7 @@ describe('It tests fixture modifying by converting to a string', () => {
       .then(JSON.parse) // convert string into an object
       .then(users => {
         users.forEach(user => {
-          expect(user).to.contain.key('name') 
+          expect(user).to.contain.key('name')
         });
       })
   })
