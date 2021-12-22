@@ -5,3 +5,5 @@ mochawesome-report
 AdminStaging.json
 
 .cache
+
+todo-graphql/dist
