@@ -21,12 +21,13 @@
     "bdd-headless": "npx cypress run --config-file bddConfig.json --spec cypress/integration/BDD/*.feature --headed --browser chrome",
     "gen-cucumber-report": "node cucumber-html-reports.js",
     "run-staging-cfg": "npx cypress cy:open --config-file AdminStaging.json",
-    "run-server": "node server/index.js",
     "server": "npm run app && npm run start",
     "start": "json-graphql-server todo-graphql/db.js",
     "app": "parcel serve todo-graphql/src/index.html -d todo-graphql/dist",
     "dev": "start-test server 1234 cy:open-graphql",
-    "build": "parcel build --no-source-maps"
+    "build": "parcel build --no-source-maps",
+    "run-server": "serve html-templates/crawl-website",
+    "serve-app": "start-test run-server 3000 cy:open"
   },
   "keywords": [],
   "author": "",
