@@ -2,7 +2,7 @@ describe('It will crawl on a website', () => {
 
   it('Should visit all links', () => {
     const visited = new Set()
-    const toVisit = ['html-templates/crawl-website/index.html']
+    const toVisit = ['/html-templates/crawl-website/index.html']
 
     function visitNextUrl() {
 
