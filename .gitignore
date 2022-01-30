@@ -7,3 +7,5 @@ AdminStaging.json
 .cache
 
 todo-graphql/dist
+
+cypress/integration/test
